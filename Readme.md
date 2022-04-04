@@ -3,7 +3,7 @@ With this dockerfile it's possible to run the Chaos license server in a containe
 
 # Setup & Build
 Because of restrictions you have build the image yourself.
-- Login to your Chaos acount and download the Chaos license server for linux. Place it in root with the Dockerfile.
+- Login to your Chaos acount and download the Chaos license server for linux. Place it in the directory with the Dockerfile.
 
 - Create a JSON file called chaos_cred.json with the 
 following content:
@@ -15,7 +15,7 @@ following content:
     }
     `
 
-    And place it in the root next to the Dockerfile and license server binary. This file is copied into the container to activate the server.
+    And place it in the directory next to the Dockerfile and license server binary. This file is copied into the container to activate the server.
 
 In the end you should have a directory with the following files:
 
@@ -37,5 +37,5 @@ After this you can run the container with
 `docker container run  -p 30304:30304  chaosgroup-ls`
 
 # Issues
-* At the moment the server activates with the Chaos acount with every restart of the container. Not a big deal but it would be nice to be able to delete the credentials file after inital activation.
+* The server has to activate with the Chaos acount at every restart of the container. Not a big deal but it would be nice to be able to delete the credentials file after inital activation.
 
