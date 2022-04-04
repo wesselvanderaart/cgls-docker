@@ -1,0 +1,3 @@
+# Ignore Chaos group credentials file and licenseserver binary
+chaos_cred.json
+cgls_lin_*.bin
